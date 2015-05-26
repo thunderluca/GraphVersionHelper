@@ -1,9 +1,9 @@
 # GraphVersionHelper
 
-A light helper to determine which are currently versions of Facebook Graph API for HTTP request without update your applications every time a new version is available.
+A light .NET helper to determine which are currently versions of [Facebook Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api/) for HTTP request without update your applications every time a new version is available.
 
 
-# Supported platforms
+## Supported platforms
 - .NET Framework 4.5;
 - Silverlight 5;
 - Windows 8;
@@ -14,8 +14,12 @@ A light helper to determine which are currently versions of Facebook Graph API f
 - Xamarin.iOS (Classic).
 
 
-# Dependencies
+## Dependencies
 - Microsoft.Net.Http;
 - Microsoft.Bcl;
 - Microsoft.Bcl.Build;
 - Microsoft.Bcl.Async.
+
+
+## Installation
+Simply build this solution or use the [Nuget package](https://www.nuget.org/packages/GraphVersionHelper/)!
