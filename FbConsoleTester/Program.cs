@@ -4,7 +4,7 @@ using GraphVersionHelper;
 
 namespace FbConsoleTester
 {
-    class Program
+    static class Program
     {
         static void Main()
         {
@@ -19,7 +19,7 @@ namespace FbConsoleTester
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine("Exception: " + ex);
             }
 
             Console.WriteLine("Press any key to continue...");
