@@ -20,6 +20,14 @@ A light .NET helper to determine which are currently versions of [Facebook Graph
 - Microsoft.Bcl.Build;
 - Microsoft.Bcl.Async.
 
+##Documentation
+Just use the following line
+
+```
+var item = await VersionHelper.GetLatestVersionAsync();
+```
+
+to retrieve a GraphItem which contains latest version and a collection of previous working versions of Graph API.
 
 ## Installation
 Simply build this solution or use the [Nuget package](https://www.nuget.org/packages/GraphVersionHelper/)!
