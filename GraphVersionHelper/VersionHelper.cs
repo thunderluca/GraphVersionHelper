@@ -19,8 +19,9 @@ namespace GraphVersionHelper
             var latestVersion = "v2.0";
             do
             {
-                var response = await new HttpClient().GetAsync(new Uri(GraphBaseUrl + latestVersion + "/facebook/picture"));
-                if (!response.IsSuccessStatusCode)
+                var response = new HttpClient().GetAsync(new Uri(GraphBaseUrl + latestVersion + "/facebook/picture"));
+                Task.WaitAll(response);
+                if (!response.Result.IsSuccessStatusCode)
                 {
                     return new GraphItem(tested);
                 }
