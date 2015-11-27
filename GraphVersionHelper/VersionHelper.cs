@@ -8,38 +8,43 @@ namespace GraphVersionHelper
 {
     public static class VersionHelper
     {
-        public const string GraphBaseUrl = "https://graph.facebook.com/";
+        public const string GraphBaseUrl = "https://graph.facebook.com";
 
         /// <summary>
         /// Get latest version of Graph API endpoint to use.
         /// </summary>
         public static async Task<GraphItem> GetLatestVersionAsync()
         {
-            var tested = new List<string> { "v2.0" }; //Minimal version
-            var latestVersion = "v2.0";
+            var isMajorVersionTried = false;
+            var tested = new List<double>();
+            var latestVersion = 2.3; //Minimal version
             do
             {
-                var response = new HttpClient().GetAsync(new Uri(GraphBaseUrl + latestVersion + "/facebook/picture"));
-                Task.WaitAll(response);
-                if (!response.Result.IsSuccessStatusCode)
+                //Forcing the string conversion using point instead of comma
+                var verStr = latestVersion.ToString("F1").Replace(',', '.');
+
+                var response = await new HttpClient().GetAsync(new Uri(GraphBaseUrl + "/v" + verStr + "/facebook/picture"));
+                
+                //Not working version
+                if (!response.IsSuccessStatusCode)
                 {
-                    return new GraphItem(tested);
+                    if (isMajorVersionTried)
+                        return new GraphItem(tested);
+
+                    //Let's try if Facebook introduced 
+                    //a new major version of Graph endpoint
+                    latestVersion = (int)tested.First() + 1;
+
+                    isMajorVersionTried = true;
+
+                    continue;
                 }
-                if (tested.Last() != latestVersion)
+
+                //Working version, I add it
+                if (tested.Count == 0 || tested.Last() < latestVersion)
                     tested.Add(latestVersion);
-                var splittedVersion = latestVersion.Split('.');
-                var lastNum = int.Parse(splittedVersion.Last());
-                if (lastNum < 9)
-                {
-                    lastNum++;
-                    latestVersion = splittedVersion.First() + "." + lastNum;
-                }
-                else
-                {
-                    var mainNum = int.Parse(splittedVersion.First()[1].ToString());
-                    mainNum++;
-                    latestVersion = "v" + mainNum + ".0";
-                }
+
+                latestVersion = latestVersion + 0.1;
             } while (true);
         }
     }

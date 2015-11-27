@@ -8,7 +8,7 @@ namespace GraphVersionHelper
         /// <summary>
         /// Latest tested and working version of Graph API.
         /// </summary>
-        public string Version { get; private set; }
+        public string Version { get; }
 
         /// <summary>
         /// Base url to be used for Graph API requests.
@@ -20,12 +20,15 @@ namespace GraphVersionHelper
         /// </summary>
         public IList<string> Previous { get; private set; }
 
-        public GraphItem(IList<string> versions)
+        public GraphItem(IEnumerable<double> versions)
         {
-            Version = versions.Last();
-            BaseUrl = VersionHelper.GraphBaseUrl + versions.Last();
-            versions.RemoveAt(versions.Count - 1);
-            Previous = versions;
+            //Forcing the string conversion using point instead of comma
+            var versionStr = versions.Select(v => "v" + v.ToString("F1").Replace(',', '.')).ToList(); 
+
+            Version = versionStr.Last();
+            BaseUrl = VersionHelper.GraphBaseUrl + versionStr.Last();
+            versionStr.RemoveAt(versionStr.Count - 1);
+            Previous = versionStr;
         }
 
         /// <summary>
