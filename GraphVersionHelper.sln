@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FbConsoleTester", "FbConsoleTester\FbConsoleTester.csproj", "{68E044D9-0276-4D6B-8499-47C0BCEF174D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionHelper", "GraphVersionHelper\GraphVersionHelper.csproj", "{477FBEAA-8378-46FD-833C-7AD5AF677EB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionHelper.Pcl", "GraphVersionHelper\GraphVersionHelper.Pcl.csproj", "{477FBEAA-8378-46FD-833C-7AD5AF677EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionHelper.NetStandard", "GraphVersionHelper.NetStandard\GraphVersionHelper.NetStandard.csproj", "{E3F314A5-2946-45AE-B11B-8D1B19519B97}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GraphVersionHelper.Shared", "GraphVersionHelper.Shared\GraphVersionHelper.Shared.shproj", "{DFD50C4B-C934-4B8B-A11F-5501FD57997E}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GraphVersionHelper.Shared\GraphVersionHelper.Shared.projitems*{477fbeaa-8378-46fd-833c-7ad5af677eb0}*SharedItemsImports = 4
+		GraphVersionHelper.Shared\GraphVersionHelper.Shared.projitems*{dfd50c4b-c934-4b8b-a11f-5501fd57997e}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -49,8 +57,27 @@ Global
 		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x64.Build.0 = Release|x64
 		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x86.ActiveCfg = Release|x86
 		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x86.Build.0 = Release|x86
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|ARM.Build.0 = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|x64.Build.0 = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|x86.Build.0 = Debug|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|ARM.Build.0 = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|x64.ActiveCfg = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|x64.Build.0 = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|x86.ActiveCfg = Release|Any CPU
+		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A22D6996-42CC-449B-9BC6-66359F67B484}
 	EndGlobalSection
 EndGlobal

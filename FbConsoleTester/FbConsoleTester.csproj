@@ -92,9 +92,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GraphVersionHelper\GraphVersionHelper.csproj">
+    <ProjectReference Include="..\GraphVersionHelper\GraphVersionHelper.Pcl.csproj">
       <Project>{477fbeaa-8378-46fd-833c-7ad5af677eb0}</Project>
-      <Name>GraphVersionHelper</Name>
+      <Name>GraphVersionHelper.Pcl</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

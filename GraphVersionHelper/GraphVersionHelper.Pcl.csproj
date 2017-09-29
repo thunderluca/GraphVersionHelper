@@ -8,8 +8,8 @@
     <ProjectGuid>{477FBEAA-8378-46FD-833C-7AD5AF677EB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphVersionHelper</RootNamespace>
-    <AssemblyName>GraphVersionHelper</AssemblyName>
+    <RootNamespace>GraphVersionHelper.Pcl</RootNamespace>
+    <AssemblyName>GraphVersionHelper.Pcl</AssemblyName>
     <DefaultLanguage>it-IT</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -90,13 +90,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GraphItem.cs" />
-    <Compile Include="VersionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <Import Project="..\GraphVersionHelper.Shared\GraphVersionHelper.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

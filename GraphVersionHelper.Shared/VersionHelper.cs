@@ -17,16 +17,13 @@ namespace GraphVersionHelper
         {
             var isMajorVersionTried = false;
             var tested = new List<double>();
-            var latestVersion = 2.3; //Minimal version
+            var latestVersion = 1.0; //Minimal version
             do
             {
-                //Forcing the string conversion using point instead of comma
-                var verStr = latestVersion.ToString("F1").Replace(',', '.');
-
-                var response = await new HttpClient().GetAsync(new Uri($"{GraphBaseUrl}/v{verStr}/facebook/picture"));
+                var isWorkingVersion = await CheckVersionAsync(latestVersion);
                 
                 //Not working version
-                if (!response.IsSuccessStatusCode)
+                if (!isWorkingVersion)
                 {
                     if (isMajorVersionTried)
                         return new GraphItem(tested);
@@ -46,6 +43,22 @@ namespace GraphVersionHelper
 
                 latestVersion = latestVersion + 0.1;
             } while (true);
+        }
+
+        private static async Task<bool> CheckVersionAsync(double version)
+        {
+            //Forcing the string conversion using point instead of comma
+            var verStr = version.ToString("F1").Replace(',', '.');
+
+            var httpRequestMessage = new HttpRequestMessage
+            {
+                Method = HttpMethod.Head,
+                RequestUri = new Uri($"{GraphBaseUrl}/v{verStr}/facebook/picture")
+            };
+
+            var response = await new HttpClient().SendAsync(httpRequestMessage);
+
+            return response.IsSuccessStatusCode;
         }
     }
 }
