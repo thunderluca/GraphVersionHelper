@@ -5,17 +5,9 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FbConsoleTester", "FbConsoleTester\FbConsoleTester.csproj", "{68E044D9-0276-4D6B-8499-47C0BCEF174D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionHelper.Pcl", "GraphVersionHelper\GraphVersionHelper.Pcl.csproj", "{477FBEAA-8378-46FD-833C-7AD5AF677EB0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphVersionHelper.NetStandard", "GraphVersionHelper.NetStandard\GraphVersionHelper.NetStandard.csproj", "{E3F314A5-2946-45AE-B11B-8D1B19519B97}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GraphVersionHelper.Shared", "GraphVersionHelper.Shared\GraphVersionHelper.Shared.shproj", "{DFD50C4B-C934-4B8B-A11F-5501FD57997E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphVersionHelper", "GraphVersionHelper.NetStandard\GraphVersionHelper.csproj", "{E3F314A5-2946-45AE-B11B-8D1B19519B97}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		GraphVersionHelper.Shared\GraphVersionHelper.Shared.projitems*{477fbeaa-8378-46fd-833c-7ad5af677eb0}*SharedItemsImports = 4
-		GraphVersionHelper.Shared\GraphVersionHelper.Shared.projitems*{dfd50c4b-c934-4b8b-a11f-5501fd57997e}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -41,22 +33,6 @@ Global
 		{68E044D9-0276-4D6B-8499-47C0BCEF174D}.Release|x64.Build.0 = Release|x64
 		{68E044D9-0276-4D6B-8499-47C0BCEF174D}.Release|x86.ActiveCfg = Release|x86
 		{68E044D9-0276-4D6B-8499-47C0BCEF174D}.Release|x86.Build.0 = Release|x86
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|ARM.ActiveCfg = Debug|ARM
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|ARM.Build.0 = Debug|ARM
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|x64.ActiveCfg = Debug|x64
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|x64.Build.0 = Debug|x64
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|x86.ActiveCfg = Debug|x86
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Debug|x86.Build.0 = Debug|x86
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|ARM.ActiveCfg = Release|ARM
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|ARM.Build.0 = Release|ARM
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x64.ActiveCfg = Release|x64
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x64.Build.0 = Release|x64
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x86.ActiveCfg = Release|x86
-		{477FBEAA-8378-46FD-833C-7AD5AF677EB0}.Release|x86.Build.0 = Release|x86
 		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3F314A5-2946-45AE-B11B-8D1B19519B97}.Debug|ARM.ActiveCfg = Debug|Any CPU
