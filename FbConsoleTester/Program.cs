@@ -15,7 +15,7 @@ namespace FbConsoleTester
                 var t = VersionHelper.GetLatestVersionAsync();
                 Task.WaitAll(t);
 
-                Console.WriteLine("\nResult:\nVersion => " + t.Result + "\nPrevs: " + string.Join("-", t.Result.Previous));
+                Console.WriteLine($"\nResult:\nVersion => {t.Result}\nPrevs: {string.Join("-", t.Result.Previous)}");
             }
             catch (Exception ex)
             {

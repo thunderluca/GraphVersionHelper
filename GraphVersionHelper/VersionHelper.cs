@@ -23,7 +23,7 @@ namespace GraphVersionHelper
                 //Forcing the string conversion using point instead of comma
                 var verStr = latestVersion.ToString("F1").Replace(',', '.');
 
-                var response = await new HttpClient().GetAsync(new Uri(GraphBaseUrl + "/v" + verStr + "/facebook/picture"));
+                var response = await new HttpClient().GetAsync(new Uri($"{GraphBaseUrl}/v{verStr}/facebook/picture"));
                 
                 //Not working version
                 if (!response.IsSuccessStatusCode)
